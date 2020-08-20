@@ -26,6 +26,7 @@ requirements:
     - tensorboard >=1.14
     - pytorch >=1.1
     - tqdm >=4.41.0
+    - packaging
 
 test:
   imports:
