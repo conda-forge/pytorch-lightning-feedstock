@@ -19,14 +19,14 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - future >=0.17.1
-    - numpy >=1.16.4
-    - python >=3.6
-    - pyyaml >=3.13
-    - tensorboard >=1.14
-    - pytorch >=1.1
-    - tqdm >=4.41.0
+    - future  # >=0.17.1
     - packaging
+    - numpy  >=1.16.4
+    - python >=3.6
+    - pyyaml  >=5.1
+    - tensorboard ==2.2.0
+    - pytorch >=1.3
+    - tqdm  >=4.41.0
 
 test:
   imports:
