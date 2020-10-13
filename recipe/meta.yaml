@@ -10,7 +10,7 @@ source:
   sha256: 8be8d50ba231a94479c93d722a0ab9bef6758e746bf77b29deb17172c25dcdcb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,7 +24,7 @@ requirements:
     - numpy  >=1.16.4
     - python >=3.6
     - pyyaml  >=5.1
-    - tensorboard ==2.2.0
+    - tensorboard >=2.2.0
     - pytorch >=1.3
     - tqdm  >=4.41.0
     - fsspec >=0.8.0
