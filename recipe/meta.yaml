@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9ee83c45efb1a7b4ba8bde135d4068a24f960ca2fb4ace5dee020c242d21cf9
+  sha256: 5c13b2c93479cd85442c784bfb2315d397a66f52f66a58c519c7c4c6177564c8
 
 build:
   number: 0
@@ -28,6 +28,7 @@ requirements:
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
     - fsspec >=0.8.0
+    - yarl <1.6.0, >=1.0  # temp fix for failing conda builds due to some new releases of3rd-party packages
 
 test:
   imports:
