@@ -28,6 +28,7 @@ requirements:
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
     - fsspec >=0.8.0
+    - yarl <1.6.0, >=1.0  # temp fix for failing conda builds due to some new releases of3rd-party packages
 
 test:
   imports:
