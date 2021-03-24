@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bcf9d963ef6e0faa2d9a2149e16c212e1d471c1b4b555392b1e59632c02da9ab
+  sha256: f15a3fb5e25247177784441ce607cb3d95dc0bd44738e43e79d861bfc98aa1d9
 
 build:
   number: 0
@@ -23,11 +23,12 @@ requirements:
     - packaging
     - numpy  >=1.16.4
     - python >=3.6
-    - pyyaml  >=5.1
+    - pyyaml  >=5.1, !=5.4
     - pytorch >=1.3
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
     - fsspec[http] >=0.8.1
+    - torchmetrics ==0.2.0
 
 test:
   imports:
