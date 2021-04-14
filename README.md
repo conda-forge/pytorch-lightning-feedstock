@@ -36,6 +36,7 @@ Installing `pytorch-lightning` from the `conda-forge` channel can be achieved by
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `pytorch-lightning` can be installed with:
