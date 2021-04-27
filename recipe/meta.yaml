@@ -10,7 +10,7 @@ source:
   sha256: f15a3fb5e25247177784441ce607cb3d95dc0bd44738e43e79d861bfc98aa1d9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -28,7 +28,7 @@ requirements:
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
     - fsspec[http] >=0.8.1
-    - torchmetrics ==0.2.0
+    - torchmetrics >=0.2.0
 
 test:
   imports:
