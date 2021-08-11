@@ -26,9 +26,9 @@ requirements:
     - pyyaml  >=5.1
     - pytorch >=1.6
     - tqdm  >=4.41.0
-    - tensorboard >=2.2.0, !=2.5.0
+    - tensorboard >=2.2.0
     - fsspec[http] >=2021.05.0, !=2021.06.0
-    - torchmetrics >=0.4.0
+    - torchmetrics >=0.4.1
     - pyDeprecate ==0.3.1
 
 test:
