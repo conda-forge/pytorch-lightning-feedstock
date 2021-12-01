@@ -34,8 +34,8 @@ requirements:
 test:
   imports:
     - pytorch_lightning
-  #commands:
-  #  - pip check
+  commands:
+    - pip check
   requires:
     - pip
 
