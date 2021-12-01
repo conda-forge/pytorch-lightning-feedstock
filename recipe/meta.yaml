@@ -1,13 +1,12 @@
-{% set name = "pytorch-lightning" %}
 {% set version = "1.5.4" %}
 
 package:
-  name: {{ name|lower }}
+  name: pytorch-lightning
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c7a2382d9c4fe258a56c69a011257ce2fd97fa3113a7979969d7a6242aa697d7
+  url: https://github.com/PyTorchLightning/pytorch-lightning/archive/refs/tags/{{ version }}.tar.gz
+  sha256: e9775723c1b9e12cfdc72e0d431010b3159a85c26a1ec1094a69b916bf7d1612
 
 build:
   number: 0
@@ -41,10 +40,14 @@ requirements:
 test:
   imports:
     - pytorch_lightning
-  commands:
-    - pip check
   requires:
     - pip
+    - pytest
+  source_files:
+    - tests
+  commands:
+    - pip check
+    - pytest -v tests/
 
 about:
   home: https://pypi.org/project/pytorch-lightning/
