@@ -43,6 +43,11 @@ test:
   requires:
     - pip
     - pytest
+    - cloudpickle
+    - omegaconf
+    - onnxruntime
+    - scikit-learn
+    - torchtext
   source_files:
     - tests
   commands:
