@@ -27,7 +27,13 @@ requirements:
     - pytorch >=1.6
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
-    - fsspec[http] >=2021.05.0, !=2021.06.0
+    # originally fsspec[http], which conda doesn't know, see
+    # https://github.com/conda-forge/filesystem-spec-feedstock/issues/60
+    # for now, install extra-dependencies directly, compare
+    # https://github.com/fsspec/filesystem_spec/blob/2021.11.1/setup.py#L49
+    - fsspec >=2021.05.0,!=2021.06.0
+    - requests
+    - aiohttp
     - torchmetrics >=0.4.1
     - pyDeprecate ==0.3.1
 
