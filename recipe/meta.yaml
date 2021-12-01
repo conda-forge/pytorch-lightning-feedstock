@@ -44,6 +44,7 @@ about:
   summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
   license: Apache-2.0
   license_file: LICENSE
+  dev_url: https://github.com/PyTorchLightning/pytorch-lightning
   description: |
     Lightning is a way to organize your PyTorch code to decouple the science code from the engineering.
      It's more of a style-guide than a framework.
