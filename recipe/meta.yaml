@@ -19,18 +19,19 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - python >=3.6
+    - python >=3.7
     - future  # >=0.17.1
     - packaging
     - numpy  >=1.17.2
-    - pyyaml  >=5.1
-    - pytorch >=1.6
+    - pyyaml  >=5.4
+    - pytorch >=1.8
     - tqdm  >=4.41.0
     - tensorboard >=2.2.0
     - fsspec[http] >=2021.05.0, !=2021.06.0
     - torchmetrics >=0.4.1
-    - pyDeprecate >=0.3.1
+    - pyDeprecate >=0.3.1, <0.4
     - setuptools <=59.5  # temp solution for Tensorboard using `distutils.version.LooseVersion`
+    - typing-extensions >= 4.0.0
 
 test:
   imports:
