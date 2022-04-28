@@ -1,5 +1,4 @@
-About pytorch-lightning
-=======================
+# About pytorch-lightning
 
 Home: https://pypi.org/project/pytorch-lightning/
 
@@ -10,29 +9,26 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-lightni
 Summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
 
 Lightning is a way to organize your PyTorch code to decouple the science code from the engineering.
- It's more of a style-guide than a framework.
+It's more of a style-guide than a framework.
 
 In Lightning, you organize your code into 3 distinct categories:
 
 1. Research code (goes in the LightningModule).
-2. Engineering code (you delete, and is handled by the Trainer).
-3. Non-essential research code (logging, etc. this goes in Callbacks).
+1. Engineering code (you delete, and is handled by the Trainer).
+1. Non-essential research code (logging, etc. this goes in Callbacks).
 
 Although your research/production project might start simple, once you add things like GPU AND TPU training,
- 16-bit precision, etc, you end up spending more time engineering than researching.
- Lightning automates AND rigorously tests those parts for you.
+16-bit precision, etc, you end up spending more time engineering than researching.
+Lightning automates AND rigorously tests those parts for you.
 
 Overall, Lightning guarantees rigorously tested, correct, modern best practices for the automated parts.
 
-Documentation
--------------
+## Documentation
+
 - https://pytorch-lightning.readthedocs.io/en/latest
 - https://pytorch-lightning.readthedocs.io/en/stable
 
-
-Current build status
-====================
-
+# Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
@@ -43,15 +39,13 @@ Current build status
   </tr>
 </table>
 
-Current release info
-====================
+# Current release info
 
-| Name | Downloads | Version | Platforms |
-| --- | --- | --- | --- |
+| Name                                                                                                                                    | Downloads                                                                                                                                   | Version                                                                                                                                   | Platforms                                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-pytorch--lightning-green.svg)](https://anaconda.org/conda-forge/pytorch-lightning) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pytorch-lightning.svg)](https://anaconda.org/conda-forge/pytorch-lightning) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pytorch-lightning.svg)](https://anaconda.org/conda-forge/pytorch-lightning) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pytorch-lightning.svg)](https://anaconda.org/conda-forge/pytorch-lightning) |
 
-Installing pytorch-lightning
-============================
+# Installing pytorch-lightning
 
 Installing `pytorch-lightning` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
@@ -97,9 +91,7 @@ mamba repoquery whoneeds pytorch-lightning --channel conda-forge
 mamba repoquery depends pytorch-lightning --channel conda-forge
 ```
 
-
-About conda-forge
-=================
+# About conda-forge
 
 [![Powered by
 NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
@@ -121,26 +113,23 @@ channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
-Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
-this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
+Using the `conda-forge.yml` within this repository, it is possible to re-render all of
+this feedstock's supporting files (e.g. the CI configuration files) with `conda smithy rerender`.
 
 For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
-Terminology
-===========
+# Terminology
 
 **feedstock** - the conda recipe (raw material), supporting scripts and CI configuration.
 
 **conda-smithy** - the tool which helps orchestrate the feedstock.
-                   Its primary use is in the construction of the CI ``.yml`` files
-                   and simplify the management of *many* feedstocks.
+Its primary use is in the construction of the CI `.yml` files
+and simplify the management of *many* feedstocks.
 
 **conda-forge** - the place where the feedstock and smithy live and work to
-                  produce the finished article (built conda distributions)
+produce the finished article (built conda distributions)
 
-
-Updating pytorch-lightning-feedstock
-====================================
+# Updating pytorch-lightning-feedstock
 
 If you would like to improve the pytorch-lightning recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
@@ -155,15 +144,15 @@ on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
- * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
- * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
-   back to 0.
 
-Feedstock Maintainers
-=====================
+- If the version of a package **is not** being increased, please add or increase
+  the [`build/number`](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
+- If the version of a package **is** being increased, please remember to return
+  the [`build/number`](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
+  back to 0.
 
-* [@borda](https://github.com/borda/)
-* [@williamFalcon](https://github.com/williamFalcon/)
+# Feedstock Maintainers
 
+- [@borda](https://github.com/borda/)
+- [@carmocca](https://github.com/carmocca/)
+- [@williamFalcon](https://github.com/williamFalcon/)
