@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "1.6.5" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8d521f2619b9db2ada5bbaf9713330d01460e75a11e4bc0bc2ca25fd37c47c57
+  sha256: f3be1500e3ba9ff06c4b8f74d66f02757a5ae73b4cd2f63f47137c501a0400e2
 
 build:
   number: 0
@@ -24,11 +24,11 @@ requirements:
     - packaging
     - numpy  >=1.17.2
     - pyyaml  >=5.4
-    - pytorch >=1.8
-    - tqdm  >=4.41.0
-    - tensorboard >=2.2.0
+    - pytorch >=1.9
+    - tqdm  >=4.57.0
+    - tensorboard >=2.9.1
     - fsspec[http] >=2021.05.0, !=2021.06.0
-    - torchmetrics >=0.4.1
+    - torchmetrics >=0.7.0
     - pyDeprecate >=0.3.1, <0.4
     - setuptools <=59.5  # temp solution for Tensorboard using `distutils.version.LooseVersion`
     - typing-extensions >=4.0.0
