@@ -10,7 +10,7 @@ source:
   sha256: 605ab313e54992261db74df4a6a6d4d556f319ea8a08eff2f30d80e8b898eb14
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -20,8 +20,7 @@ requirements:
     - python >=3.6
   run:
     - python >=3.7
-    - future  # >=0.17.1
-    - packaging
+    - packaging >=17.0
     - numpy  >=1.17.2
     - pyyaml  >=5.4
     - pytorch >=1.9
@@ -29,8 +28,7 @@ requirements:
     - tensorboard >=2.9.1
     - fsspec[http] >=2021.05.0, !=2021.06.0
     - torchmetrics >=0.7.0
-    - pyDeprecate >=0.3.1, <0.4
-    - setuptools <=59.5  # temp solution for Tensorboard using `distutils.version.LooseVersion`
+    - pyDeprecate >=0.3.1
     - typing-extensions >=4.0.0
 
 test:
