@@ -10,7 +10,7 @@ source:
   sha256: d80df235228a8f6d6b77df4bfa34b3d667d734bd40e960bb4ca553a2746523eb
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -28,7 +28,6 @@ requirements:
     - tensorboard >=2.9.1
     - fsspec[http] >=2021.05.0, !=2021.06.0
     - torchmetrics >=0.7.0
-    - pyDeprecate >=0.3.1
     - typing-extensions >=4.0.0
 
 test:
