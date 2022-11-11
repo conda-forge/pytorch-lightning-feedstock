@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "1.7.7" %}
+{% set version = "1.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 27c2dd01a18db2415168e3fa3775ccb5a1fa1e2961a50439ad9365507fe9d4ae
+  sha256: 5b60e5eb84dd16ee8dc408286f0074ab475bed385b09a702d678ccbde91e4818
 
 build:
   number: 0
