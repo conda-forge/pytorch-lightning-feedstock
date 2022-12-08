@@ -27,7 +27,7 @@ requirements:
     - tqdm >=4.57.0, <4.65.0
     - tensorboard >=2.9.1, <2.11.0
     - fsspec[http] >2021.06.0, <2022.8.0
-    - torchmetrics>=0.7.0, <0.10.1
+    - torchmetrics >=0.7.0, <0.10.1
     - typing-extensions >=4.0.0, <=4.4.0
     - lightning-utilities >=0.3.0, <0.4.0
 
