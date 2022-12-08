@@ -17,9 +17,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
   run:
-    - python >=3.7
+    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
     - packaging >=17.0
     - numpy >=1.17.2
     - pyyaml >=5.4
@@ -37,6 +37,7 @@ test:
   #commands:
   #  - pip check
   requires:
+    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
     - pip
 
 about:
