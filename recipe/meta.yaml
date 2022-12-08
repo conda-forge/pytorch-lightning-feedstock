@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7, <3.11  # TODO: this upper bound is because of PyTorch issue
   run:
     - python >=3.7
     - packaging >=17.0
