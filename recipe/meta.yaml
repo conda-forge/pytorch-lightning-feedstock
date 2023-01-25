@@ -29,7 +29,7 @@ requirements:
     - fsspec[http] >2021.06.0
     - torchmetrics >=0.7.0
     - typing-extensions >=4.0.0
-    - lightning-utilities >=0.3.0, !=0.4.0
+    - lightning-utilities =0.3.*
 
 test:
   imports:
