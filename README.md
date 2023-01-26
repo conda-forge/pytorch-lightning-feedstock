@@ -166,6 +166,5 @@ Feedstock Maintainers
 
 * [@borda](https://github.com/borda/)
 * [@carmocca](https://github.com/carmocca/)
-* [@jan-janssen](https://github.com/jan-janssen/)
 * [@williamFalcon](https://github.com/williamFalcon/)
 
