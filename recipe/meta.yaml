@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "1.8.6" %}
+{% set version = "1.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c4af783579a1528e07f40dd9bd0128c162bbbcf74fe1ce4292fec63fa7e76ada
+  sha256: 5b75fe936d16ef86dae22ea1cb0a73db281605cade682c0ef44e6508a99a0b37
 
 build:
   number: 0
@@ -20,16 +20,15 @@ requirements:
     - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
   run:
     - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
-    - packaging >=17.0
+    - packaging >=17.1
     - numpy >=1.17.2
     - pyyaml >=5.4
-    - pytorch >=1.9.0
+    - pytorch >=1.10.0
     - tqdm >=4.57.0
-    - tensorboardX >=2.2, <=2.5.1
     - fsspec[http] >2021.06.0
     - torchmetrics >=0.7.0
     - typing-extensions >=4.0.0
-    - lightning-utilities >=0.3.0, !=0.4.0
+    - lightning-utilities >=0.4.2
 
 test:
   imports:
