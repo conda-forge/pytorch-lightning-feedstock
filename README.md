@@ -1,11 +1,11 @@
-About pytorch-lightning
-=======================
+About pytorch-lightning-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-lightning-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/pytorch-lightning/
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytorch-lightning-feedstock/blob/main/LICENSE.txt)
 
 Summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
 
