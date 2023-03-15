@@ -10,7 +10,7 @@ source:
   sha256: 188a7f4468acf23512e7f4903253d86fc7929a49f0c09d699872e364162001e8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -70,3 +70,4 @@ extra:
     - williamFalcon
     - borda
     - carmocca
+    - jan-janssen
