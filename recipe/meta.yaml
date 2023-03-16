@@ -10,25 +10,26 @@ source:
   sha256: 632dec9af8036f726904e691c505d7650658ef0f4054a062c9e6a940ca09dfd8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
+    - python >=3.8
   run:
-    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
+    - python >=3.8
     - packaging >=17.1
     - numpy >=1.17.2
     - pyyaml >=5.4
-    - pytorch >=1.10.0
+    - pytorch >=1.11.0
     - tqdm >=4.57.0
     - fsspec[http] >2021.06.0
     - torchmetrics >=0.7.0
-    - typing-extensions >=4.0.0
-    - lightning-utilities >=0.4.2
+    - typing_extensions >=4.0.0
+    - lightning-utilities >=0.7.0
+    - requests
 
 test:
   imports:
