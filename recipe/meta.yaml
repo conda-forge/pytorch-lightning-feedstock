@@ -1,5 +1,5 @@
-{% set name = "pytorch-lightning" %}
-{% set version = "2.0.7" %}
+{% set name = "lightning" %}
+{% set version = "1.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4e6bc1e1f7b0c69016ea2fe0616b18fa62bd3d8661c7ff02c11d317746cfc5f5
+  sha256: 4f56a390e58551cf40173c8c74684972c261185f3a92690888340b7209855f49
 
 build:
   number: 0
@@ -17,23 +17,23 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
   run:
-    - python >=3.8
-    - packaging >=17.1
+    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
+    - packaging >=17.0
     - numpy >=1.17.2
     - pyyaml >=5.4
-    - pytorch >=1.11.0
+    - pytorch >=1.9.0
     - tqdm >=4.57.0
+    - tensorboardX >=2.2, <=2.5.1
     - fsspec[http] >2021.06.0
     - torchmetrics >=0.7.0
-    - typing_extensions >=4.0.0
-    - lightning-utilities >=0.7.0
-    - requests
+    - typing-extensions >=4.0.0
+    - lightning-utilities >=0.3.0, !=0.4.0
 
 test:
   imports:
-    - pytorch_lightning
+    - lightning
   commands:
     - pip check
   requires:
@@ -41,8 +41,8 @@ test:
     - pip
 
 about:
-  home: https://pypi.org/project/pytorch-lightning/
-  summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
+  home: https://pypi.org/project/lightning/
+  summary: Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
   license: Apache-2.0
   license_file: LICENSE
   description: |
