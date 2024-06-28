@@ -1,5 +1,5 @@
 {% set name = "pytorch-lightning" %}
-{% set version = "2.3.0" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 89caf90e3543b314508493f26e0eca8d5e10e43e3d9e6c143acd8ddceb584ce2
+  sha256: 8cfcc585fdf6570add34cf2cf4cabc3984d0e2d8b4cee52226485b61d3b8366d
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - fsspec[http] >2021.06.0
     - torchmetrics >=0.7.0
     - typing_extensions >=4.0.0
-    - lightning-utilities >=0.8.0
+    - lightning-utilities >=0.10.0
     - requests
 
 test:
