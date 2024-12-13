@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
     - fsspec >=2022.5.0
     - typing-extensions >=4.4.0
