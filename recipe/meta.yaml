@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6aa897fd9d6dfa7b7b49f37c2f04e13592861831d08deae584dfda423fdb71c8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - fsspec >=2022.5.0
     - typing-extensions >=4.4.0
-    - python >=3.8
+    - python >={{ python_min }}
     - packaging >=20.0
     - numpy >=1.17.2
     - pyyaml >=5.4
@@ -39,7 +39,7 @@ test:
   commands:
     - pip check
   requires:
-    - python >=3.7, <3.11 # TODO: this upper bound is because of PyTorch issue with dataclass
+    - python {{ python_min }}  # TODO: this upper bound is because of PyTorch issue with dataclass
     - pip
 
 about:
