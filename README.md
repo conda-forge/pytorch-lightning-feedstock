@@ -9,8 +9,10 @@ Package license: Apache-2.0
 
 Summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
 
+Development: https://github.com/Lightning-AI/pytorch-lightning
+
 Lightning is a way to organize your PyTorch code to decouple the science code from the engineering.
- It's more of a style-guide than a framework.
+It's more of a style-guide than a framework.
 
 In Lightning, you organize your code into 3 distinct categories:
 
@@ -19,8 +21,8 @@ In Lightning, you organize your code into 3 distinct categories:
 3. Non-essential research code (logging, etc. this goes in Callbacks).
 
 Although your research/production project might start simple, once you add things like GPU AND TPU training,
- 16-bit precision, etc, you end up spending more time engineering than researching.
- Lightning automates AND rigorously tests those parts for you.
+16-bit precision, etc, you end up spending more time engineering than researching.
+Lightning automates AND rigorously tests those parts for you.
 
 Overall, Lightning guarantees rigorously tested, correct, modern best practices for the automated parts.
 
@@ -28,7 +30,6 @@ Documentation
 -------------
 - https://pytorch-lightning.readthedocs.io/en/latest
 - https://pytorch-lightning.readthedocs.io/en/stable
-
 
 Current build status
 ====================
@@ -167,5 +168,6 @@ Feedstock Maintainers
 * [@borda](https://github.com/borda/)
 * [@carmocca](https://github.com/carmocca/)
 * [@jan-janssen](https://github.com/jan-janssen/)
+* [@synapticarbors](https://github.com/synapticarbors/)
 * [@williamFalcon](https://github.com/williamFalcon/)
 
