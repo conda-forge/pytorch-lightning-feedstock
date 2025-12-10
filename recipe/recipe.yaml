@@ -1,56 +1,57 @@
-{% set name = "pytorch-lightning" %}
-{% set version = "2.5.5" %}
+schema_version: 1
+
+context:
+  name: pytorch-lightning
+  version: 2.6.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d6fc8173d1d6e49abfd16855ea05d2eb2415e68593f33d43e59028ecb4e64087
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 25b0d4f05e1f33b72be0920c34d0465777fe5f623228f9d6252b4b0f685d7037
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
   run:
     - fsspec >=2022.5.0
-    - typing-extensions >=4.4.0
-    - python >={{ python_min }}
+    - typing-extensions >=4.5.0
+    - python >=${{ python_min }}
     - packaging >=20.0
-    - numpy >=1.17.2
+    - numpy >=1.20.0
     - pyyaml >5.4
     - pytorch >=2.1.0
     - tqdm >=4.57.0
-    - fsspec[http] >2021.06.0
     - torchmetrics >0.7.0
     - typing_extensions >4.5.0
     - lightning-utilities >=0.10.0
     - requests
+    # mock the fsspec[http] requirement
+    - aiohttp !=4.0.0a0,!=4.0.0a1
 
-test:
-  imports:
-    - pytorch_lightning
-  commands:
-    - pip check
-  requires:
-    - python {{ python_min }}  # TODO: this upper bound is because of PyTorch issue with dataclass
-    - pip
+tests:
+  - python:
+      imports:
+        - pytorch_lightning
+      pip_check: true
+      python_version: ${{ python_min }}.*
 
 about:
-  home: https://pypi.org/project/pytorch-lightning/
   summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
   license: Apache-2.0
   license_file: LICENSE
   description: |
     Lightning is a way to organize your PyTorch code to decouple the science code from the engineering.
-     It's more of a style-guide than a framework.
+    It's more of a style-guide than a framework.
 
     In Lightning, you organize your code into 3 distinct categories:
 
@@ -59,8 +60,8 @@ about:
     3. Non-essential research code (logging, etc. this goes in Callbacks).
 
     Although your research/production project might start simple, once you add things like GPU AND TPU training,
-     16-bit precision, etc, you end up spending more time engineering than researching.
-     Lightning automates AND rigorously tests those parts for you.
+    16-bit precision, etc, you end up spending more time engineering than researching.
+    Lightning automates AND rigorously tests those parts for you.
 
     Overall, Lightning guarantees rigorously tested, correct, modern best practices for the automated parts.
 
@@ -69,9 +70,14 @@ about:
     - https://pytorch-lightning.readthedocs.io/en/latest
     - https://pytorch-lightning.readthedocs.io/en/stable
 
+
+  homepage: https://pypi.org/project/pytorch-lightning/
+  repository: https://github.com/Lightning-AI/pytorch-lightning
+
 extra:
   recipe-maintainers:
     - williamFalcon
     - borda
     - carmocca
     - jan-janssen
+    - synapticarbors
