@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pytorch-lightning
-  version: 2.6.0
+  version: 2.6.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 25b0d4f05e1f33b72be0920c34d0465777fe5f623228f9d6252b4b0f685d7037
+  sha256: ba08f8901cf226fcca473046ad9346f414e99117762dc869c76e650d5b3d7bdc
 
 build:
   number: 0
@@ -24,20 +24,14 @@ requirements:
     - setuptools
   run:
     - fsspec >=2022.5.0
-    - typing-extensions >=4.5.0
     - python >=${{ python_min }}
-    - packaging >=20.0
-    - numpy >=1.20.0
+    - packaging >=23.0
     - pyyaml >5.4
     - pytorch >=2.1.0
     - tqdm >=4.57.0
     - torchmetrics >0.7.0
     - typing_extensions >4.5.0
     - lightning-utilities >=0.10.0
-    - requests
-    # mock the fsspec[http] requirement
-    - aiohttp !=4.0.0a0,!=4.0.0a1
-
 tests:
   - python:
       imports:
