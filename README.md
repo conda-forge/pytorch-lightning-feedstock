@@ -35,10 +35,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9943&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pytorch-lightning-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/pytorch-lightning-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/pytorch-lightning-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -170,7 +171,4 @@ Feedstock Maintainers
 * [@jan-janssen](https://github.com/jan-janssen/)
 * [@synapticarbors](https://github.com/synapticarbors/)
 * [@williamFalcon](https://github.com/williamFalcon/)
-
-
-<!-- dummy commit to enable rerendering -->
 
