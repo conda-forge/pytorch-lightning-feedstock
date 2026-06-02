@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: pytorch-lightning
-  version: 2.6.1
+  version: "2.6.5"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ba08f8901cf226fcca473046ad9346f414e99117762dc869c76e650d5b3d7bdc
+  sha256: 1c32cefa76a1a9c4c5250338272d961d1e48b180e68396849efe128538ddb28e
 
 build:
   number: 0
