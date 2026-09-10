@@ -37,7 +37,9 @@ tests:
       imports:
         - pytorch_lightning
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: PyTorch Lightning is the lightweight PyTorch wrapper for ML researchers. Scale your models. Write less boilerplate.
